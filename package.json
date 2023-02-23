@@ -37,5 +37,8 @@
     "grunt-contrib-uglify": "~5.0.0",
     "grunt-jscs": "~3.0.1",
     "grunt-jsduck": "~1.0.1"
+  },
+  "dependencies": {
+    "firebase": "^9.17.1"
   }
 }
