@@ -33,6 +33,7 @@ var preloadables = [];
  */
 function update() {
   player.update();
+
 }
 
 /**
@@ -41,7 +42,8 @@ function update() {
 function draw() {
   // Draw a background. This is just for illustration so we can see scrolling.
   context.drawCheckered(80, 0, 0, world.width, world.height);
-
+  //CanvasRenderingContext2D.drawImage(preloadables[0]);
+  player.src= "js/app/Drone.png";
 	player.draw();
 }
 
@@ -54,11 +56,12 @@ function draw() {
  */
 function setup(first) {
   // Change the size of the playable area. Do this before placing items!
-  world.resize(canvas.width + 200, canvas.height + 200);
+  world.resize(canvas.width, canvas.height);
 
   // Switch from side view to top-down.
   Actor.prototype.GRAVITY = false;
-
+  
   // Initialize the player.
   player = new Player();
+  
 }
